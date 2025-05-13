@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Enhanced Scene</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        #threejs-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        #click-message {
+            position: absolute;
+            bottom: 20px; /* Move to the bottom of the screen */
+            left: 50%;
+            transform: translateX(-50%); /* Center horizontally */
+            font-size: 1.2rem; /* Slightly smaller font size */
+            font-family: 'Arial', sans-serif;
+            color: #ffffff; /* White text */
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+            padding: 10px 20px; /* Add padding for better spacing */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+            text-align: center; /* Center the text */
+            cursor: default; /* Default cursor */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="threejs-container"></div>
+    <div id="click-message">Click on the house to explore more details about it</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
+    <script>
+        // Scene setup
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x87CEEB); // Light blue sky color
+        scene.fog = new THREE.Fog(0x87CEEB, 10, 100); // Add fog for depth
+
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('threejs-container').appendChild(renderer.domElement);
+
+        // Lights
+        const ambientLight = new THREE.AmbientLight(0x404040, 1.2); // Soft ambient light
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1.0); // Main sunlight
+        directionalLight.position.set(10, 20, 10);
+        directionalLight.castShadow = true;
+        directionalLight.shadow.mapSize.width = 4096; // Higher resolution shadows
+        directionalLight.shadow.mapSize.height = 4096;
+        directionalLight.shadow.camera.near = 0.5;
+        directionalLight.shadow.camera.far = 100;
+        directionalLight.shadow.camera.left = -20;
+        directionalLight.shadow.camera.right = 20;
+        directionalLight.shadow.camera.top = 20;
+        directionalLight.shadow.camera.bottom = -20;
+        scene.add(directionalLight);
+
+        const fillLight = new THREE.DirectionalLight(0xffe0b2, 0.5); // Warm fill light
+        fillLight.position.set(-10, 10, -10);
+        scene.add(fillLight);
+
+        const rimLight = new THREE.PointLight(0xffd700, 0.3, 50); // Subtle rim light for highlights
+        rimLight.position.set(0, 15, 10);
+        scene.add(rimLight);
+
+        const spotLight = new THREE.SpotLight(0xffffff, 0.7); // Spotlight for focused lighting
+        spotLight.position.set(15, 30, 15);
+        spotLight.angle = Math.PI / 6;
+        spotLight.penumbra = 0.3;
+        spotLight.castShadow = true;
+        spotLight.shadow.mapSize.width = 2048;
+        spotLight.shadow.mapSize.height = 2048;
+        scene.add(spotLight);
+
+        // Enable shadows in the renderer
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Softer shadows
+
+        // GLTF Loader
+        const loader = new THREE.GLTFLoader();
+        let model; // Variable to store the loaded model
+
+        function loadModel(path) {
+            const fullPath = path; // Use the relative path directly
+            console.log('Loading model:', fullPath);
+
+            loader.load(fullPath, function (gltf) {
+                if (model) {
+                    scene.remove(model);
+                }
+                model = gltf.scene;
+                scene.add(model);
+
+                // Center the model
+                const box = new THREE.Box3().setFromObject(model);
+                const center = box.getCenter(new THREE.Vector3());
+                model.position.sub(center);
+
+                // Adjust camera position based on model size
+                const size = box.getSize(new THREE.Vector3());
+                const maxDim = Math.max(size.x, size.y, size.z);
+                const fov = camera.fov * (Math.PI / 180);
+                let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
+                cameraZ *= 1.5; // Zoom out slightly
+
+                camera.position.set(0, cameraZ / 2, cameraZ);
+                camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+                // Reset controls target and update
+                controls.target.set(0, 0, 0);
+                controls.update();
+            }, undefined, function (error) {
+                console.error('Error loading model:', error);
+            });
+        }
+
+        // OrbitControls for rotation
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.25;
+        controls.screenSpacePanning = false;
+        controls.maxPolarAngle = Math.PI / 2;
+
+        // Variable to track if the camera is rotating
+        let isOrbiting = true;
+
+        // Event listener to toggle rotation with the "o" key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'o') {
+                isOrbiting = !isOrbiting;
+                controls.autoRotate = isOrbiting;
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', onWindowResize, false);
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        // Main animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            controls.update(); // Update controls
+            renderer.render(scene, camera); // Render the scene
+        }
+
+        // Enable auto-rotation
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 1.0; // Adjust rotation speed
+
+        // Load the initial model
+        loadModel('model/house_model.glb');
+
+        // Redirect to dashboard.html on click
+        document.addEventListener('click', function () {
+            window.location.href = 'dashboard.html';
+        });
+
+        animate();
+    </script>
+</body>
+
+</html>

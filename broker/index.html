@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            margin-top: 20px;
+            color: #495057;
+            background-color: #f4f6f9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .table thead th {
+            background-color: #f8f9fa;
+        }
+
+        .action-btn {
+            margin-left: 10px;
+        }
+
+        .text-muted {
+            color: #495057 !important;
+            font-weight: 300;
+        }
+
+        footer {
+            width: 100%;
+            background-color: transparent;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .broker-status {
+            color: gray;
+            display: inline-block;
+        }
+
+        .broker-status.online {
+            color: green;
+        }
+
+        .broker-status.offline {
+            color: red;
+        }
+
+        .icons-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            width: 100%;
+        }
+
+        .table-container {
+            width: 100%;
+        }
+
+        .badge {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+    
+    <div class="container">
+        <!-- Right-side icons -->
+        <div class="icons-right">
+            <button class="btn btn-light action-btn" id="refresh" title="Refresh"><i class="fas fa-sync-alt"></i></button>
+            <a href="settings_index.html" class="btn btn-light action-btn" title="Settings"><i class="fas fa-cog"></i></a>
+            <button class="btn btn-light action-btn" id="openPythonScript" title="Broker Terminal"><i class="fas fa-terminal"></i></button>
+            <button class="btn btn-light action-btn" id="openTerminal" title="New Terminal"><i class="fas fa-window-restore"></i></button>
+        </div>
+
+        <!-- Table of clients -->
+        <h2 class="h3 mb-4 mt-5">Client Information</h2>
+        <div class="table-container">
+            <div class="table-responsive">
+                <table class="table border bg-white">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Last Activity</th>
+                            <th>First Connected</th>
+                            <th></th> <!-- Column for delete button -->
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody" class="tableBody">
+                        <!-- Client list will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer>
+            <p class="broker-status online" id="brokerStatus">
+                <span class="text-muted">Broker Status: </span>
+                <span class="badge badge-success">Online</span>
+            </p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        // ******************************************************************* Request status of broker ******************************************************************* 
+        let brokerStatus = false; // Default status is false (offline)
+        
+        function requestBrokerStatus() {
+            console.log('Requesting broker status...');
+            window.electron.ipcRenderer.requestStatus(); // Request the status of the broker via IPC
+
+            // Listen for the response from the main process
+            window.electron.ipcRenderer.receive('status-response', (data) => {
+                console.log(`Broker status: ${data}`); // Logs the status (true/false)
+                const brokerStatusElement = document.getElementById('brokerStatus');
+                const statusBadge = brokerStatusElement.querySelector('.badge');
+
+                // Add onclick listener to the badge
+                statusBadge.onclick = badgeClick;
+
+                if (data) { // If the broker is online (true)
+                    statusBadge.classList.remove('badge-danger');
+                    statusBadge.classList.add('badge-success');
+                    statusBadge.textContent = 'Online';
+                    brokerStatusElement.querySelector('.text-muted').textContent = 'Broker Status: ';
+                    brokerStatus = true; // Set the status to true
+                } else { // If the broker is offline (false)
+                    statusBadge.classList.remove('badge-success');
+                    statusBadge.classList.add('badge-danger');
+                    statusBadge.textContent = 'Offline';
+                    brokerStatusElement.querySelector('.text-muted').textContent = 'Broker Status: ';
+                    brokerStatus = false; // Set the status to false
+                }
+            });
+        }
+
+        // Call the function to request broker status
+        requestBrokerStatus();
+
+        // ******************************************************************* Badge click function *******************************************************************
+        function badgeClick() {
+            console.log('Badge clicked!');
+            if (brokerStatus) { // If the broker is online
+                console.log('Broker is online. Sending shutdown request...');
+                window.electron.ipcRenderer.send('shutdown-broker'); // Send a shutdown request to the broker
+                console.log('Broker shutdown request sent.');
+                setTimeout(function() {
+                    requestBrokerStatus(); // Request the status of the broker again
+                }, 5000);
+            } else { // If the broker is offline
+                console.log('Broker is offline. Sending start request...');
+                window.electron.ipcRenderer.send('start-broker'); // Send a start request to the broker
+                console.log('Broker start request sent.');
+                setTimeout(function() {
+                    requestBrokerStatus(); // Request the status of the broker again
+                }, 5000);
+            }
+        }
+
+        // ******************************************************************* Event listeners for buttons *******************************************************************
+        $(document).ready(function() {
+            // Placeholder for opening Python script
+            $('#openPythonScript').click(function() {
+                console.log('Opening broker terminal...');
+                window.electron.ipcRenderer.send('broker-terminal');
+            });
+
+            // Placeholder for opening new terminal
+            $('#openTerminal').click(function() {
+                console.log('Opening new terminal...');
+                window.electron.ipcRenderer.send('open-terminal');
+            });
+
+            // Event listener for the refresh button
+            $('#refresh').click(async function() {
+                const table = document.getElementById('tableBody');
+                try {
+                    const result = await window.electron.ipcRenderer.invoke('get-connected-clients');
+                    if (result.success) {
+                        table.innerHTML = ''; // Clear the table
+                        for (const [name, client] of Object.entries(result.data)) {
+                            const newRow = document.createElement('tr');
+                            newRow.innerHTML = `
+                                <th scope="col"><i class="fe fe-globe fe-12 text-muted mr-2"></i>${name}</th>
+                                <td>Online</td>
+                                <td>${client.timestamp}</td> <!-- Adjusted to show last activity timestamp -->
+                                <td>${client.timestamp}</td> <!-- Assuming first connected is the same for now -->
+                                <td><button class="btn btn-danger btn-sm rounded-circle delete-button" data-client="${name}">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button></td>
+                            `;
+                            table.appendChild(newRow);
+                        }
+                        addDeleteFunctionality();
+                    } else {
+                        console.error('Error fetching connected clients:', result.error);
+                    }
+                } catch (error) {
+                    console.error('Error during refresh:', error);
+                }
+            });
+
+            // Function to add delete functionality
+            function addDeleteFunctionality() {
+                document.querySelectorAll('.delete-button').forEach(function(button) {
+                    button.addEventListener('click', async function() {
+                        const clientName = this.getAttribute('data-client');
+                        try {
+                            const result = await window.electron.ipcRenderer.invoke('delete-client', clientName);
+                            if (result.success) {
+                                this.closest('tr').remove();
+                                console.log(`Client ${clientName} deleted successfully`);
+                            } else {
+                                console.error('Failed to delete client:', result.message);
+                                // Optionally show an error message to the user
+                            }
+                        } catch (error) {
+                            console.error('Error deleting client:', error);
+                        }
+                    });
+                });
+            }
+
+            // Add delete functionality to the initial rows (if any)
+            addDeleteFunctionality();
+        });
+    </script>
+</body>
+</html>

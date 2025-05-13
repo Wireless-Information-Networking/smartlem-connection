@@ -1,0 +1,458 @@
+/* Base Styles */
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #d9d9b3; /* Muted taupe */
+  color: #333333; /* Dark charcoal */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 20px),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 20px);
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2C3E50; /* Dark blue-gray */
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5dc; /* Beige */
+  border: 1px solid #5D8AA8; /* Muted blue */
+  position: relative;
+  min-height: 400px;
+  padding-bottom: 80px; /* Space for buttons */
+  color: #333333;
+}
+
+.description {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+/* Screen Transitions */
+.screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d9d9b3;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Smooth fade for both in and out */
+  pointer-events: none; /* Prevent interaction when inactive */
+}
+
+.screen.active {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  pointer-events: auto; /* Allow interaction when active */
+}
+
+/* Ensure all children fade with the screen */
+.screen * {
+  transition: opacity 0.5s ease;
+}
+
+/* Form Elements */
+.input-field label {
+  color: #2C3E50; /* Dark blue-gray */
+}
+
+.card input,
+.card select,
+.card textarea,
+.select-wrapper input.select-dropdown {
+  color: #333333;
+}
+
+.dynamic-group {
+  border: 1px dashed #5D8AA8;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  background-color: #f5f5dc;
+  color: #333333;
+}
+
+/* Buttons - General */
+.btn {
+  font-family: 'Nunito', sans-serif;
+  background-color: #5D8AA8; /* Muted blue */
+  color: #F0F0E0; /* Cream */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4a7b9d; /* Darker blue */
+  box-shadow: 0 4px 10px rgba(93, 138, 168, 0.5);
+  transform: scale(1.05);
+}
+
+/* Navigation Buttons */
+.nav-btns {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  opacity: inherit;
+}
+
+.nav-btns.single-btn {
+  justify-content: center;
+}
+
+.nav-btns.single-btn .next-btn {
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button.prev-btn,
+button.next-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #5D8AA8;
+  padding: 10px 20px;
+  background: #5D8AA8;
+  color: #F0F0E0;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+button.prev-btn:hover,
+button.next-btn:hover {
+  background-color: #4a7b9d;
+  box-shadow: 0 4px 10px rgba(93, 138, 168, 0.5);
+  transform: scale(1.05);
+}
+
+button.prev-btn > svg,
+button.next-btn > svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.4s ease-in;
+}
+
+button.next-btn > svg {
+  margin-left: 5px;
+}
+
+button.prev-btn > svg {
+  margin-right: 5px;
+}
+
+button.next-btn:hover > svg {
+  transform: translateX(6px);
+}
+
+button.prev-btn:hover > svg {
+  transform: translateX(-6px);
+}
+
+/* Get Started Button */
+.cssbuttons-io-button {
+  background: #5D8AA8;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  padding: 0.35em 3.3em 0.35em 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 1.6em -0.6em #4a7b9d;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2.8em;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #4a7b9d;
+  right: 0.3em;
+  transition: width 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #4a7b9d;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+/* Add Buttons */
+.add-btn {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #93c48b; /* Soft green */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #7aa874; /* Darker green */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.add-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.add-btn svg {
+  margin-right: 8px;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
+}
+
+/* Default Config Button */
+.default-config-btn {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #FF6F61; /* Coral */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: opacity 0.5s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.default-config-btn:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-message {
+  visibility: hidden;
+  background-color: #444444;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hover-container:hover .hover-message {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Checkbox */
+.checkbox-wrapper input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper *,
+.checkbox-wrapper ::after,
+.checkbox-wrapper ::before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.checkbox-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.checkbox-wrapper .label {
+  cursor: pointer;
+}
+
+.checkbox-wrapper .check {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-wrapper .label svg {
+  vertical-align: middle;
+}
+
+.checkbox-wrapper .path1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: stroke-dashoffset 0.5s;
+  opacity: 0;
+}
+
+.checkbox-wrapper .check:checked + .label svg g path {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+/* Simulation Loader */
+.simulation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent;
+  color: #26a69a; /* Teal */
+}
+
+#simulation-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 80px;
+  text-align: center;
+  color: inherit;
+}
+
+.loader .tree-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.tree {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(30deg);
+  animation: treeAnimate 5s linear infinite;
+}
+
+@keyframes treeAnimate {
+  0% { transform: rotateX(-20deg) rotateY(360deg); }
+  100% { transform: rotateX(-20deg) rotateY(0deg); }
+}
+
+.tree div {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: translateY(calc(25px * var(--x))) translateZ(0px);
+}
+
+.tree div.branch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #69c069, #77dd77);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  border-bottom: 5px solid #00000019;
+  transform-origin: bottom;
+  transform: rotateY(calc(90deg * var(--i))) rotateX(30deg) translateZ(28.5px);
+}
+
+.tree div.stem span {
+  position: absolute;
+  top: 110px;
+  left: calc(50% - 7.5px);
+  width: 15px;
+  height: 50%;
+  background: linear-gradient(90deg, #bb4622, #df7214);
+  border-bottom: 5px solid #00000019;
+  transform-origin: bottom;
+  transform: rotateY(calc(90deg * var(--i))) translateZ(7.5px);
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  filter: blur(20px);
+  transform-style: preserve-3d;
+  transform: rotateX(90deg) translateZ(-65px);
+}

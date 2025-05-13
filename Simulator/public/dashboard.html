@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yar - Smart House Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #d9d9b3;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image:
+                repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 20px),
+                repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 20px);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2C3E50;
+        }
+
+        /* Dashboard Container */
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card {
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f5f5dc;
+            border: 1px solid #5D8AA8;
+            margin-bottom: 25px;
+            color: #333333;
+            transition: opacity 0.5s ease;
+            width: 100%;
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .description {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        /* Filter */
+        .filter-container {
+            margin-bottom: 30px;
+            text-align: center;
+            background-color: #f5f5dc;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #5D8AA8;
+            display: inline-block;
+        }
+
+        .filter-container label {
+            color: #2C3E50;
+            font-size: 1.2em;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        .filter-container select {
+            display: inline-block;
+            width: 200px;
+            color: #333333;
+            background-color: #fff;
+            border: 1px solid #5D8AA8;
+            border-radius: 4px;
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        .filter-container select:focus {
+            outline: none;
+            border-color: #4a7b9d;
+            box-shadow: 0 0 5px rgba(93, 138, 168, 0.5);
+        }
+
+        /* Overview Card */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat .label {
+            display: block;
+            font-size: 1em;
+            color: #2C3E50;
+        }
+
+        .stat .value {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #5D8AA8;
+        }
+
+        /* Graphs */
+        .energy-graph,
+        .solar-graph,
+        .water-usage {
+            min-height: 320px;
+        }
+
+        #energyChart,
+        #solarChart,
+        #waterChart {
+            width: 100%;
+            height: 270px;
+        }
+
+        /* Battery Status */
+        .battery-gauge {
+            width: 100%;
+            height: 25px;
+            background-color: #d9d9b3;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .gauge-bar {
+            height: 100%;
+            background-color: #93c48b;
+            transition: width 0.5s ease;
+        }
+
+        .battery-percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .battery-status .health {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        .health.good {
+            color: #93c48b;
+        }
+
+        .health.warning {
+            color: #FF6F61;
+        }
+
+        /* Climate Conditions */
+        .climate-stats {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .climate-item {
+            text-align: center;
+            margin: 15px;
+        }
+
+        .temp-gauge {
+            width: 120px;
+            height: 120px;
+            background: conic-gradient(#5D8AA8 0% calc(var(--temp) * 3.6deg), #d9d9b3 calc(var(--temp) * 3.6deg) 100%);
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .temp-gauge::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #f5f5dc;
+            border-radius: 50%;
+        }
+
+        .temp-value {
+            position: relative;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #5D8AA8;
+        }
+
+        .humidity-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(#93c48b 0% calc(var(--humidity) * 3.6deg), #d9d9b3 calc(var(--humidity) * 3.6deg) 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .humidity-circle::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #f5f5dc;
+            border-radius: 50%;
+        }
+
+        .humidity-value {
+            position: relative;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #93c48b;
+        }
+
+        .air-quality {
+            font-size: 1.2em;
+        }
+
+        .air-quality span {
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        .air-quality.good span {
+            background-color: #93c48b;
+            color: #fff;
+        }
+
+        /* Button Styles */
+        .btn {
+            font-family: 'Nunito', sans-serif;
+            background-color: #5D8AA8;
+            color: #F0F0E0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.5s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #4a7b9d;
+            box-shadow: 0 4px 10px rgba(93, 138, 168, 0.5);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin: 20px;">
+        <button class="btn" onclick="goBack()">Go Back</button>
+    </div>
+
+    <div class="dashboard-container">
+        <h1>Smart House Dashboard</h1>
+        <p class="description">Real-time insights for John Doe's Smart House</p>
+
+        <!-- Filter -->
+        <div class="filter-container">
+            <label for="time-range">View Data For:</label>
+            <select id="time-range" onchange="updateDashboard()">
+                <option value="day">Last Day</option>
+                <option value="month">Last Month</option>
+                <option value="year">Last Year</option>
+            </select>
+            <!-- Export Button with Dropdown -->
+            <div style="display: inline-block; margin-left: 20px;">
+                <button class="btn dropdown-trigger" data-target="export-dropdown">Export</button>
+                <ul id="export-dropdown" class="dropdown-content">
+                    <li><a href="#!" onclick="exportDashboard('pdf')">Export as PDF</a></li>
+                    <li><a href="#!" onclick="exportDashboard('html')">Export as HTML</a></li>
+                    <li><a href="#!" onclick="exportDashboard('csv')">Export as CSV</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Overview Card -->
+        <div class="stats-grid">
+            <div class="stat">
+                <span class="label">Average Battery Level</span>
+                <span class="value" id="battery-level"></span>
+            </div>
+            <div class="stat">
+                <span class="label">Total Solar Production</span>
+                <span class="value" id="solar-prod"></span>
+            </div>
+            <div class="stat">
+                <span class="label">Total Grid Consumption</span>
+                <span class="value" id="grid-cons"></span>
+            </div>
+            <div class="stat">
+                <span class="label">Total House Consumption</span>
+                <span class="value" id="house-cons"></span>
+            </div>
+            <div class="stat">
+                <span class="label">Total Water Usage</span>
+                <span class="value" id="water-use"></span>
+            </div>
+        </div>
+
+        <!-- Energy Consumption Graph -->
+        <div class="card energy-graph">
+            <h2>Energy Consumption Over Time</h2>
+            <canvas id="energyChart"></canvas>
+        </div>
+
+        <!-- Solar Production Graph -->
+        <div class="card solar-graph">
+            <h2>Solar Production Over Time</h2>
+            <canvas id="solarChart"></canvas>
+        </div>
+
+        <!-- Battery Status -->
+        <div class="card battery-status">
+            <h2>Battery Status</h2>
+            <div class="battery-gauge">
+                <div class="gauge-bar" id="battery-gauge"></div>
+                <span class="battery-percentage" id="battery-percentage">83.6%</span>
+            </div>
+            <p class="health" id="battery-health">Health: Good</p>
+        </div>
+
+        <!-- Water Usage -->
+        <div class="card water-usage">
+            <h2>Water Usage Over Time</h2>
+            <canvas id="waterChart"></canvas>
+        </div>
+
+        <!-- Climate Conditions -->
+        <div class="card climate">
+            <h2>Climate Conditions</h2>
+            <div class="climate-stats">
+                <div class="climate-item">
+                    <div class="temp-gauge" id="temp-gauge">
+                        <span class="temp-value" id="temp">12°C</span>
+                    </div>
+                    <p>Temperature</p>
+                </div>
+                <div class="climate-item">
+                    <div class="humidity-circle" id="humid-gauge">
+                        <span class="humidity-value" id="humid">77%</span>
+                    </div>
+                    <p>Humidity</p>
+                </div>
+                <div class="climate-item air-quality good">
+                    <p>Air Quality: <span id="air-quality">Good (1)</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        let fullData = [];
+        let energyChart, solarChart, waterChart;
+        let houseID = "john_doe's_smart_house"; // Default houseID, will be updated after simulation
+        let filteredData = []; // Make filteredData accessible globally
+
+
+        // Transform file data to dashboard format
+        function transformData(rawData) {
+            return rawData.map(entry => {
+                const timestamp = new Date(entry.timestamp);
+                const energy = entry.energy_management_sensors;
+                const water = entry.water_management_sensors;
+                const climate = entry.climate_and_environment_sensors;
+
+                // Calculate total device consumption
+                const totalDevices = Object.values(energy.energy_efficiency.device_consumption).reduce((a, b) => a + b, 0);
+
+                return {
+                    timestamp: timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                    fullTimestamp: timestamp,
+                    grid: energy.solar_power.grid_consumption,
+                    solar: energy.solar_power.production,
+                    devices: totalDevices, // Now a number (total consumption in kW)
+                    battery: energy.battery.charge_level,
+                    batteryHealth: energy.battery.health_status,
+                    water: water.usage_tracking,
+                    temperature: parseFloat(climate.temperature),
+                    humidity: parseFloat(climate.humidity),
+                    airQuality: climate.air_quality,
+                    airQualityDescription: climate.air_quality_description
+                };
+            });
+        }
+
+
+        function exportDashboard(format) {
+            if (filteredData.length === 0) {
+                alert('No data available to export. Please ensure the dashboard has loaded data.');
+                return;
+            }
+
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-'); // For unique filenames
+            const filenamePrefix = `SmartHouseDashboard_${timestamp}`;
+
+            if (format === 'pdf') {
+                // Export as PDF using html2pdf.js
+                const element = document.querySelector('.dashboard-container');
+                const opt = {
+                    margin: 0.5,
+                    filename: `${filenamePrefix}.pdf`,
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                };
+                html2pdf().set(opt).from(element).save();
+            } else if (format === 'html') {
+                // Export as HTML
+                const htmlContent = `
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Yar - Smart House Dashboard Export</title>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+                <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito&display=swap" rel="stylesheet">
+                <style>
+                    ${document.querySelector('style').innerHTML}
+                </style>
+            </head>
+            <body>
+                ${document.querySelector('.dashboard-container').outerHTML}
+            </body>
+            </html>
+        `;
+                const blob = new Blob([htmlContent], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${filenamePrefix}.html`;
+                a.click();
+                URL.revokeObjectURL(url);
+            } else if (format === 'csv') {
+                // Export as CSV
+                const headers = ['Timestamp', 'Grid Consumption (kW)', 'Device Consumption (kW)', 'Solar Production (kW)', 'Battery Level (Ah)', 'Water Usage (L)', 'Temperature (°C)', 'Humidity (%)', 'Air Quality', 'Air Quality Description'];
+                const rows = filteredData.map(d => [
+                    d.timestamp,
+                    d.grid,
+                    d.devices,
+                    d.solar,
+                    d.battery,
+                    d.water,
+                    d.temperature,
+                    d.humidity,
+                    d.airQuality,
+                    d.airQualityDescription
+                ]);
+                const csvContent = [
+                    headers.join(','),
+                    ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
+                ].join('\n');
+                const blob = new Blob([csvContent], { type: 'text/csv' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${filenamePrefix}.csv`;
+                a.click();
+                URL.revokeObjectURL(url);
+            }
+        }
+
+
+        // Aggregate data for monthly or yearly views
+        function aggregateData(data, range) {
+            console.log('Aggregating data for range:', range);
+            console.log('Data length before aggregation:', data.length);
+
+            if (range === 'day') return data;
+
+            const aggregated = [];
+            const grouped = {};
+            data.forEach(entry => {
+                const date = entry.fullTimestamp;
+                const key = range === 'month'
+                    ? `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
+                    : `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+                if (!grouped[key]) {
+                    grouped[key] = {
+                        timestamps: [],
+                        grid: [],
+                        solar: [],
+                        devices: [],
+                        battery: [],
+                        water: [],
+                        temperature: [],
+                        humidity: [],
+                        airQuality: []
+                    };
+                }
+                grouped[key].timestamps.push(entry.fullTimestamp);
+                grouped[key].grid.push(entry.grid);
+                grouped[key].solar.push(entry.solar);
+                grouped[key].devices.push(entry.devices); // Now a number, no need to sum again
+                grouped[key].battery.push(entry.battery);
+                grouped[key].water.push(entry.water);
+                grouped[key].temperature.push(entry.temperature);
+                grouped[key].humidity.push(entry.humidity);
+                grouped[key].airQuality.push(entry.airQuality);
+            });
+
+            // Compute averages
+            for (const key in grouped) {
+                const group = grouped[key];
+                const avg = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
+                aggregated.push({
+                    timestamp: key,
+                    fullTimestamp: new Date(key),
+                    grid: avg(group.grid),
+                    solar: avg(group.solar),
+                    devices: avg(group.devices), // Average of total device consumption
+                    battery: avg(group.battery),
+                    water: avg(group.water),
+                    temperature: avg(group.temperature),
+                    humidity: avg(group.humidity),
+                    airQuality: Math.round(avg(group.airQuality)),
+                    batteryHealth: data[data.length - 1].batteryHealth,
+                    airQualityDescription: data[data.length - 1].airQualityDescription
+                });
+            }
+
+            return aggregated.sort((a, b) => a.fullTimestamp - b.fullTimestamp);
+        }
+
+        function filterDataByTimeRange(data, range) {
+            if (data.length === 0) return [];
+
+            // Find the latest timestamp in the data
+            const latestTimestamp = new Date(Math.max(...data.map(entry => new Date(entry.fullTimestamp))));
+
+            let cutoff;
+            if (range === 'day') {
+                cutoff = new Date(latestTimestamp.getTime() - 24 * 60 * 60 * 1000); // Last 24 hours from the latest timestamp
+            } else if (range === 'month') {
+                cutoff = new Date(latestTimestamp.getTime() - 30 * 24 * 60 * 60 * 1000); // Last 30 days from the latest timestamp
+            } else {
+                cutoff = new Date(latestTimestamp.getTime() - 365 * 24 * 60 * 60 * 1000); // Last year from the latest timestamp
+            }
+
+            console.log('Latest timestamp:', latestTimestamp);
+            console.log('Cutoff time:', cutoff);
+
+            return data.filter(entry => {
+                const entryTime = new Date(entry.fullTimestamp);
+                console.log('Entry timestamp:', entryTime, 'Cutoff:', cutoff, 'Is included:', entryTime >= cutoff);
+                return entryTime >= cutoff;
+            });
+        }
+
+        function updateDashboard() {
+            const range = document.getElementById('time-range').value;
+            console.log('Updating dashboard for range:', range);
+            let originalFilteredData = filterDataByTimeRange(fullData, range);
+            filteredData = aggregateData(originalFilteredData, range); // Assign to global variable
+            console.log('Original Filtered Data length:', originalFilteredData.length);
+            console.log('Aggregated Filtered Data:', filteredData);
+
+            if (originalFilteredData.length === 0) {
+                console.warn('No data available for the selected time range.');
+                return;
+            }
+
+            // Calculate totals and averages from originalFilteredData
+            const totalSolarEnergy = originalFilteredData.reduce((sum, d) => sum + d.solar * (5 / 60), 0); // kWh
+            const totalGridEnergy = originalFilteredData.reduce((sum, d) => sum + d.grid * (5 / 60), 0); // kWh
+            const totalDeviceEnergy = originalFilteredData.reduce((sum, d) => sum + d.devices * (5 / 60), 0); // kWh
+            const totalWater = originalFilteredData.reduce((sum, d) => sum + d.water, 0); // L
+            const totalBattery = originalFilteredData.reduce((sum, d) => sum + d.battery, 0);
+            const avgBattery = totalBattery / originalFilteredData.length;
+
+            // Update Overview
+            document.getElementById('battery-level').textContent = `${avgBattery.toFixed(2)} Ah (average)`;
+            document.getElementById('solar-prod').textContent = `${totalSolarEnergy.toFixed(2)} kWh`;
+            document.getElementById('grid-cons').textContent = `${totalGridEnergy.toFixed(2)} kWh`;
+            document.getElementById('house-cons').textContent = `${totalDeviceEnergy.toFixed(2)} kWh`;
+            document.getElementById('water-use').textContent = `${totalWater.toFixed(1)} L`;
+
+            // For charts and other elements, use filteredData
+            const latest = filteredData[filteredData.length - 1];
+
+            // Update Battery Status
+            const batteryPercentage = (latest.battery / 5) * 100;
+            document.getElementById('battery-gauge').style.width = `${batteryPercentage}%`;
+            document.getElementById('battery-percentage').textContent = `${batteryPercentage.toFixed(1)}%`;
+            const healthElement = document.getElementById('battery-health');
+            healthElement.textContent = `Health: ${latest.batteryHealth.charAt(0).toUpperCase() + latest.batteryHealth.slice(1)}`;
+            healthElement.className = `health ${latest.batteryHealth}`;
+
+            // Update Energy Chart
+            if (energyChart) energyChart.destroy();
+            const energyCtx = document.getElementById('energyChart').getContext('2d');
+            energyChart = new Chart(energyCtx, {
+                type: 'line',
+                data: {
+                    labels: filteredData.map(d => d.timestamp),
+                    datasets: [
+                        { label: 'Grid Consumption (kW)', data: filteredData.map(d => d.grid), borderColor: '#5D8AA8', fill: false },
+                        { label: 'Device Consumption (kW)', data: filteredData.map(d => d.devices), borderColor: '#93c48b', fill: false }
+                    ]
+                },
+                options: { responsive: true, scales: { y: { beginAtZero: true } }, plugins: { legend: { position: 'top' } } }
+            });
+
+            // Update Solar Chart
+            if (solarChart) solarChart.destroy();
+            const solarCtx = document.getElementById('solarChart').getContext('2d');
+            solarChart = new Chart(solarCtx, {
+                type: 'line',
+                data: {
+                    labels: filteredData.map(d => d.timestamp),
+                    datasets: [{
+                        label: 'Solar Production (kW)',
+                        data: filteredData.map(d => d.solar),
+                        borderColor: '#FF6F61',
+                        fill: false
+                    }]
+                },
+                options: { responsive: true, scales: { y: { beginAtZero: true } } }
+            });
+
+            // Update Water Chart
+            if (waterChart) waterChart.destroy();
+            const waterCtx = document.getElementById('waterChart').getContext('2d');
+            waterChart = new Chart(waterCtx, {
+                type: 'bar',
+                data: {
+                    labels: filteredData.map(d => d.timestamp),
+                    datasets: [{
+                        label: 'Water Usage (L)',
+                        data: filteredData.map(d => d.water),
+                        backgroundColor: '#5D8AA8',
+                        borderColor: '#4a7b9d',
+                        borderWidth: 1
+                    }]
+                },
+                options: { responsive: true, scales: { y: { beginAtZero: true } } }
+            });
+
+            // Update Climate Conditions
+            document.getElementById('temp-gauge').style.setProperty('--temp', latest.temperature);
+            document.getElementById('temp').textContent = `${latest.temperature}°C`;
+            document.getElementById('humid-gauge').style.setProperty('--humidity', latest.humidity);
+            document.getElementById('humid').textContent = `${latest.humidity}%`;
+            document.getElementById('air-quality').textContent = `${latest.airQualityDescription} (${latest.airQuality})`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            M.FormSelect.init(document.querySelectorAll('select'));
+            M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'), { constrainWidth: false });
+
+            // Listen for simulation completion
+            window.electronAPI.onSimulationComplete(({ filePath, data, houseID: newHouseID }) => {
+                console.log('Simulation completed, data received:', filePath);
+                houseID = newHouseID; // Update houseID
+                fullData = transformData(data);
+                updateDashboard();
+            });
+
+            // Listen for simulation errors
+            window.electronAPI.onSimulationError((error) => {
+                console.error('Simulation error:', error);
+                alert('Simulation failed: ' + error);
+            });
+
+            // Optionally, load existing data if available
+            window.electronAPI.loadSimData(houseID).then(data => {
+                if (data.length > 0) {
+                    fullData = transformData(data);
+                    //console.log('Full Data:', fullData);
+                    updateDashboard();
+                }
+            });
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

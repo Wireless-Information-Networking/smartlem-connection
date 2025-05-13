@@ -1,0 +1,39 @@
+[
+    {
+        "device": "Sink",
+        "flow_rate": [1, 8],
+        "typical_duration": [1, 5],
+        "max_uses_per_day": 5,
+        "usage_patterns": {
+            "morning": 0.7,
+            "midday": 0.5,
+            "dinner": 0.8,
+            "evening": 0.8,
+            "other": 0.0
+        }
+    },
+    {
+        "device": "Shower",
+        "flow_rate": [6, 15],
+        "typical_duration": [5, 15],
+        "max_uses_per_day": 2,
+        "usage_patterns": {
+            "morning": 0.3,
+            "evening": 0.1,
+            "dinner": 0.8,
+            "other": 0.0
+        }
+    },
+    {
+        "device": "Washing Machine",
+        "flow_rate": [10, 20],
+        "typical_duration": [30, 60],
+        "max_uses_per_day": 1,
+        "usage_patterns": {
+            "midday": 0.0,
+            "dinner": 1.0,
+            "evening": 0.0,
+            "other": 0.0
+        }
+    }
+]

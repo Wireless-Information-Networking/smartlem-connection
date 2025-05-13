@@ -1,0 +1,341 @@
+{
+    "basic_parameters": {
+        "name": "John Doe's Smart House",
+        "age_options": [
+            "child",
+            "teenager",
+            "adult",
+            "elderly"
+        ],
+        "number_of_people": 3,
+        "npc": [
+            {
+                "name": "John Doe",
+                "age_group": "adult",
+                "out_of_home_periods": [
+                    {
+                        "start": "09:00",
+                        "end": "17:00",
+                        "reason": "Work"
+                    },
+                    {
+                        "start": "18:00",
+                        "end": "19:00",
+                        "reason": "Gym"
+                    }
+                ]
+            },
+            {
+                "name": "Jane Doe",
+                "age_group": "adult",
+                "out_of_home_periods": [
+                    {
+                        "start": "08:30",
+                        "end": "16:30",
+                        "reason": "Work"
+                    }
+                ]
+            },
+            {
+                "name": "Kid Doe",
+                "age_group": "child",
+                "out_of_home_periods": [
+                    {
+                        "start": "08:00",
+                        "end": "14:00",
+                        "reason": "School"
+                    }
+                ]
+            }
+        ],
+        "rooms": 3,
+        "bathrooms": 2,
+        "kitchen": 1,
+        "living_room": 1,
+        "dining_room": 1,
+        "garage": 1,
+        "garden": 1,
+        "type_of_simulation": {
+            "type": "fast_forward",
+            "start_date": "2021-01-01",
+            "end_date": "2021-01-02",
+            "options": [
+                "real_time",
+                "fast_forward"
+            ]
+        }
+    },
+    "house": {
+        "volume_cubic_meters": 1000
+    },
+    "solar_panels": {
+        "panel_eff": 0.2,
+        "number_of_panels": 10,
+        "size_of_panels_m2": 1.5
+    },
+    "battery": {
+        "capacity_ah": 100,
+        "voltage": 48,
+        "initial_state_of_charge_percent": 95.0,
+        "charging_efficiency": 0.95,
+        "discharging_efficiency": 0.95,
+        "energy_loss_conversion": 0.02,
+        "degrading_ratio": 0.03
+    },
+    "water_heating": {
+        "selected_method": "electricity",
+        "options": [
+            "electricity",
+            "natural gas",
+            "propane",
+            "fossil fuel"
+        ]
+    },
+    "emission_factors": {
+        "solar_panel_emission_factor_kgCO2_per_kWh": {
+            "min": 0.02,
+            "max": 0.04
+        },
+        "cold_water_emission_factor_kgCO2_per_L": 0.0106,
+        "hot_water_emission_factor_kgCO2_per_L": 0.0215
+    },
+
+    "remote_connection": {
+        "inSameComputer": true,
+        "endpoint_to_ddbb": "",
+        "username": "",
+        "password": "",
+        "not_local_params": {
+            "remote_brok_ip": "",
+            "remote_brok_port": ""
+        }
+
+    },
+
+
+    "water_devices": [
+        {
+            "device": "sink",
+            "room": "Kitchen",
+            "flow_rate_liters_per_minute": 6,
+            "typical_duration": [
+                1,
+                5
+            ],
+            "max_uses_per_day": 6,
+            "usage_patterns": {
+                "morning": 0.8,
+                "midday": 0.5,
+                "dinner": 0.9,
+                "evening": 0.6,
+                "other": 0.2
+            }
+        },
+        {
+            "device": "sink",
+            "room": "Bathroom",
+            "flow_rate_liters_per_minute": 3.5,
+            "typical_duration": [
+                1,
+                3
+            ],
+            "max_uses_per_day": 5,
+            "usage_patterns": {
+                "morning": 0.9,
+                "midday": 0.4,
+                "dinner": 0.5,
+                "evening": 0.8,
+                "other": 0.2
+            }
+        },
+        {
+            "device": "shower",
+            "room": "Bathroom",
+            "flow_rate_liters_per_minute": 9.5,
+            "typical_duration": [
+                5,
+                15
+            ],
+            "max_uses_per_day": 1,
+            "usage_patterns": {
+                "morning": 0.8,
+                "midday": 0.0,
+                "dinner": 0.1,
+                "evening": 0.7,
+                "other": 0.0
+            }
+        },
+        {
+            "device": "toilet",
+            "room": "Bathroom",
+            "flow_rate_liters_per_minute": 6,
+            "typical_duration": [
+                0.5,
+                1
+            ],
+            "max_uses_per_day": 6,
+            "usage_patterns": {
+                "morning": 0.8,
+                "midday": 0.6,
+                "dinner": 0.7,
+                "evening": 0.6,
+                "other": 0.4
+            }
+        }
+    ],
+    "electricity_devices": [
+        {
+            "device": "refrigerator",
+            "room": "Kitchen",
+            "power_watts": 150,
+            "typical_duration": [
+                24,
+                24
+            ],
+            "max_uses_per_day": 1,
+            "usage_patterns": {
+                "morning": 1.0,
+                "midday": 1.0,
+                "dinner": 1.0,
+                "evening": 1.0,
+                "other": 1.0
+            }
+        },
+        {
+            "device": "stove",
+            "room": "Kitchen",
+            "power_watts": 2000,
+            "typical_duration": [
+                0.5,
+                1
+            ],
+            "max_uses_per_day": 3,
+            "usage_patterns": {
+                "morning": 0.7,
+                "midday": 0.5,
+                "dinner": 0.9,
+                "evening": 0.3,
+                "other": 0.1
+            }
+        },
+        {
+            "device": "microwave",
+            "room": "Kitchen",
+            "power_watts": 1000,
+            "typical_duration": [
+                0.1,
+                0.5
+            ],
+            "max_uses_per_day": 2,
+            "usage_patterns": {
+                "morning": 0.6,
+                "midday": 0.4,
+                "dinner": 0.7,
+                "evening": 0.5,
+                "other": 0.2
+            }
+        },
+        {
+            "device": "dishwasher",
+            "room": "Kitchen",
+            "power_watts": 1200,
+            "typical_duration": [
+                1,
+                1.5
+            ],
+            "max_uses_per_day": 1,
+            "usage_patterns": {
+                "morning": 0.2,
+                "midday": 0.1,
+                "dinner": 0.8,
+                "evening": 0.6,
+                "other": 0.0
+            }
+        },
+        {
+            "device": "washing_machine",
+            "room": "Kitchen",
+            "power_watts": 500,
+            "typical_duration": [
+                0.75,
+                1.5
+            ],
+            "max_uses_per_day": 1,
+            "usage_patterns": {
+                "morning": 0.3,
+                "midday": 0.4,
+                "dinner": 0.2,
+                "evening": 0.6,
+                "other": 0.1
+            }
+        },
+        {
+            "device": "vacuum_cleaner",
+            "room": "Living Room",
+            "power_watts": 800,
+            "typical_duration": [
+                0.5,
+                1
+            ],
+            "max_uses_per_day": 1,
+            "usage_patterns": {
+                "morning": 0.3,
+                "midday": 0.5,
+                "dinner": 0.2,
+                "evening": 0.4,
+                "other": 0.1
+            }
+        },
+        {
+            "device": "computer",
+            "room": "Bedroom",
+            "power_watts": 150,
+            "typical_duration": [
+                1,
+                4
+            ],
+            "max_uses_per_day": 2,
+            "usage_patterns": {
+                "morning": 0.4,
+                "midday": 0.3,
+                "dinner": 0.5,
+                "evening": 0.9,
+                "other": 0.2
+            }
+        },
+        {
+            "device": "tv",
+            "room": "Living Room",
+            "power_watts": 100,
+            "typical_duration": [
+                1,
+                3
+            ],
+            "max_uses_per_day": 2,
+            "usage_patterns": {
+                "morning": 0.3,
+                "midday": 0.2,
+                "dinner": 0.6,
+                "evening": 0.9,
+                "other": 0.1
+            }
+        },
+        {
+            "device": "gaming_console",
+            "room": "Living Room",
+            "power_watts": 150,
+            "typical_duration": [
+                1,
+                3
+            ],
+            "max_uses_per_day": 1,
+            "usage_patterns": {
+                "morning": 0.2,
+                "midday": 0.3,
+                "dinner": 0.5,
+                "evening": 0.8,
+                "other": 0.1
+            }
+        }
+    ]
+}

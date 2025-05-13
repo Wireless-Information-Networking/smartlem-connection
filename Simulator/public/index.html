@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yar - Smart House Configurator</title>
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+  <div id="start-screen" class="screen active">
+    <div class="container">
+      <div class="card">
+        <h1>Welcome to Yar!</h1>
+        <p class="description">Hey there! Ready to build your smart house config? Hit start and let’s roll!</p>
+        <button class="cssbuttons-io-button" onclick="nextScreen()">
+          Get started
+          <div class="icon">
+            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                fill="currentColor"></path>
+            </svg>
+          </div>
+        </button>
+        <div class="hover-container">
+          <button class="default-config-btn" onclick="useDefaultConfig()">Use default config file</button>
+          <span class="hover-message">Two adults and one kid</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 1: Basic Info -->
+  <div id="section-1" class="screen">
+    <div class="container">
+      <div class="card">
+        <h2>Basic Info</h2>
+        <p class="description">Tell us about your house and who’s living there. Let’s start with the basics!</p>
+        <div class="input-field">
+          <input id="house-name" type="text" class="validate">
+          <label for="house-name">What’s the name of your smart house?</label>
+        </div>
+        <div class="input-field">
+          <input id="num-people" type="number" min="1" value="1" class="validate">
+          <label for="num-people">How many people live here?</label>
+        </div>
+        <div id="people-details"></div>
+        <a href="#" class="add-btn" onclick="addPerson()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
+            </path>
+          </svg>
+          Add Person
+        </a>
+        <div class="nav-btns">
+          <button class="prev-btn" onclick="prevScreen()" style="display: none;">
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 4.5L3 12m0 0l7.5 7.5M3 12h18" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+            <span>Previous</span>
+          </button>
+          <div class="nav-btns single-btn">
+            <button class="next-btn" onclick="nextScreen()">
+              <span>Next</span>
+              <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linejoin="round" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: House Layout -->
+  <div id="section-2" class="screen">
+    <div class="container">
+      <div class="card">
+        <h2>House Layout</h2>
+        <p class="description">Let’s map out your house—how’s it set up?</p>
+        <div class="input-field">
+          <input id="num-bedrooms" type="number" min="0" value="0" onchange="updateRoomNames('bedrooms')"
+            class="validate">
+          <label for="num-bedrooms">How many bedrooms you got?</label>
+        </div>
+        <div id="bedrooms-names"></div>
+        <div class="input-field">
+          <input id="num-bathrooms" type="number" min="0" value="0" onchange="updateRoomNames('bathrooms')"
+            class="validate">
+          <label for="num-bathrooms">How many bathrooms?</label>
+        </div>
+        <div id="bathrooms-names"></div>
+        <div class="input-field">
+          <input id="num-kitchens" type="number" min="0" value="0" onchange="updateRoomNames('kitchens')"
+            class="validate">
+          <label for="num-kitchens">How many kitchens?</label>
+        </div>
+        <div id="kitchens-names"></div>
+        <div class="nav-btns">
+          <button class="prev-btn" onclick="prevScreen()">
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 4.5L3 12m0 0l7.5 7.5M3 12h18" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+            <span>Previous</span>
+          </button>
+          <button class="next-btn" onclick="nextScreen()">
+            <span>Next</span>
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Simulation Settings -->
+  <div id="section-3" class="screen">
+    <div class="container">
+      <div class="card">
+        <h2>Simulation Settings</h2>
+        <p class="description">How do you wanna run this sim?</p>
+        <div class="input-field">
+          <select id="simulation-type">
+            <option value="fast_forward">Fast Forward (speedy!)</option>
+            <option value="real_time">Real Time (normal speed)</option>
+          </select>
+          <label>What type of simulation you feeling?</label>
+        </div>
+        <div class="input-field">
+          <input id="start-date" type="date" class="validate">
+          <label for="start-date">When should it start?</label>
+        </div>
+        <div class="input-field">
+          <input id="end-date" type="date" class="validate">
+          <label for="end-date">When should it end?</label>
+        </div>
+        <div class="nav-btns">
+          <button class="prev-btn" onclick="prevScreen()">
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 4.5L3 12m0 0l7.5 7.5M3 12h18" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+            <span>Previous</span>
+          </button>
+          <button class="next-btn" onclick="nextScreen()">
+            <span>Next</span>
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5: Solar Panels -->
+  <div id="section-4" class="screen">
+    <div class="container">
+      <div class="card">
+        <h2>Solar Panels</h2>
+        <p class="description">Got some solar vibes going?</p>
+        <div class="input-field">
+          <input id="panel-efficiency" type="number" min="0" max="1" step="0.01" class="validate">
+          <label for="panel-efficiency">Efficiency (0–1)</label>
+        </div>
+        <div class="input-field">
+          <input id="num-panels" type="number" min="0" step="1" class="validate">
+          <label for="num-panels">Number of panels</label>
+        </div>
+        <div class="input-field">
+          <input id="panel-size" type="number" min="0" step="0.1" class="validate">
+          <label for="panel-size">Size (m²)</label>
+        </div>
+        <div class="nav-btns">
+          <button class="prev-btn" onclick="prevScreen()">
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 4.5L3 12m0 0l7.5 7.5M3 12h18" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+            <span>Previous</span>
+          </button>
+          <button class="next-btn" onclick="nextScreen()">
+            <span>Next</span>
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 6: Battery -->
+  <div id="section-5" class="screen">
+    <div class="container">
+      <div class="card">
+        <h2>Battery</h2>
+        <p class="description">Power storage specs, let’s go!</p>
+        <div class="input-field">
+          <input id="battery-capacity" type="number" min="0" step="1" class="validate">
+          <label for="battery-capacity">Capacity (Ah)</label> <!-- Changed kWh to Ah to match JSON -->
+        </div>
+        <div class="input-field">
+          <input id="battery-voltage" type="number" min="0" step="1" class="validate">
+          <label for="battery-voltage">Voltage (V)</label>
+        </div>
+        <div class="input-field">
+          <input id="initial-soc" type="number" min="0" max="100" step="0.1" class="validate">
+          <label for="initial-soc">Initial State of Charge (%)</label>
+        </div>
+        <div class="input-field">
+          <input id="charge-efficiency" type="number" min="0" max="1" step="0.01" class="validate">
+          <label for="charge-efficiency">Charge Efficiency (0–1)</label>
+        </div>
+        <div class="input-field">
+          <input id="discharge-efficiency" type="number" min="0" max="1" step="0.01" class="validate">
+          <label for="discharge-efficiency">Discharge Efficiency (0–1)</label>
+        </div>
+        <div class="input-field">
+          <input id="energy-loss" type="number" min="0" max="1" step="0.01" class="validate">
+          <label for="energy-loss">Energy Loss Conversion (0–1)</label>
+        </div>
+        <div class="input-field">
+          <input id="degrading-ratio" type="number" min="0" max="1" step="0.01" class="validate">
+          <label for="degrading-ratio">Degrading Ratio (0–1)</label>
+        </div>
+        <div class="nav-btns">
+          <button class="prev-btn" onclick="prevScreen()">
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 4.5L3 12m0 0l7.5 7.5M3 12h18" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+            <span>Previous</span>
+          </button>
+          <button class="next-btn" onclick="nextScreen()">
+            <span>Next</span>
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 7: Water Heating -->
+  <div id="section-6" class="screen">
+    <div class="container">
+      <div class="card">
+        <h2>Water Heating</h2>
+        <p class="description">How’s your water getting hot?</p>
+        <div class="input-field">
+          <select id="water-heating-type">
+            <option value="electricity">Electricity</option>
+            <option value="natural_gas">Natural Gas</option>
+            <option value="solar">Solar</option>
+            <option value="heat_pump">Heat Pump</option>
+          </select>
+          <label>Water Heating Type</label>
+        </div>
+        <div class="nav-btns">
+          <button class="prev-btn" onclick="prevScreen()">
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 4.5L3 12m0 0l7.5 7.5M3 12h18" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+            <span>Previous</span>
+          </button>
+          <button class="next-btn" onclick="nextScreen()">
+            <span>Next</span>
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Section 9: Water Devices -->
+  <div id="section-7" class="screen">
+    <div class="container">
+      <div class="card">
+        <h2>Water Devices</h2>
+        <p class="description">What’s using water in your house?</p>
+        <div id="water-devices"></div>
+        <a href="#" class="add-btn" onclick="addWaterDevice()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M13 3h-2v10h2V3zm-1 18c-1.1 0-2-.9-2-2h4c0 1.1-.9 2-2 2zm9-11h-4V7h-2v3h-4V7H9v3H5c-1.1 0-2 .9-2 2v7h18v-7c0-1.1-.9-2-2-2z">
+            </path>
+          </svg>
+          Add Device
+        </a>
+        <div class="nav-btns">
+          <button class="prev-btn" onclick="prevScreen()">
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 4.5L3 12m0 0l7.5 7.5M3 12h18" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+            <span>Previous</span>
+          </button>
+          <button class="next-btn" onclick="nextScreen()">
+            <span>Next</span>
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 10: Electricity Devices -->
+  <div id="section-8" class="screen">
+    <div class="container">
+      <div class="card">
+        <h2>Electricity Devices</h2>
+        <p class="description">What’s plugged in around here?</p>
+        <div id="electricity-devices"></div>
+        <a href="#" class="add-btn" onclick="addElectricityDevice()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M13 3h-2v10h2V3zm-1 18c-1.1 0-2-.9-2-2h4c0 1.1-.9 2-2 2zm9-11h-4V7h-2v3h-4V7H9v3H5c-1.1 0-2 .9-2 2v7h18v-7c0-1.1-.9-2-2-2z">
+            </path>
+          </svg>
+          Add Device
+        </a>
+        <div class="nav-btns">
+          <button class="prev-btn" onclick="prevScreen()">
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 4.5L3 12m0 0l7.5 7.5M3 12h18" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+            <span>Previous</span>
+          </button>
+          <button class="next-btn" onclick="nextScreen()">
+            <span>Next</span>
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Section 11: Remote Connection -->
+  <div id="section-9" class="screen">
+    <div class="container">
+      <div class="card">
+        <h2>Remote Connection</h2>
+        <p class="description">Set up how your smart house connects remotely! "Select Running on the same computer?" by default</p>
+        <div class="input-field">
+
+          <!-- Add checked="" to the input if you want the checkbox to be checked by default -->
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="check" id="in-same-computer" onchange="toggleRemoteParams()">
+            <label for="in-same-computer" class="label">
+              <svg width="45" height="45" viewBox="0 0 95 95">
+                <rect x="30" y="20" width="50" height="50" stroke="black" fill="none"></rect>
+                <g transform="translate(0,-952.36222)">
+                  <path d="m 56,963 c -102,122 6,9 7,9 17,-5 -66,69 -38,52 122,-77 -7,14 18,4 29,-11 45,-43 23,-4"
+                    stroke="black" stroke-width="3" fill="none" class="path1"></path>
+                </g>
+              </svg>
+              <span>Running on the same computer?</span>
+            </label>
+          </div>
+
+        </div>
+        <div id="remote-params" style="display: none;">
+          <div class="input-field">
+            <input id="endpoint-to-db" type="text" class="validate" placeholder="e.g., https://example.com/">
+            <label for="endpoint-to-db">Database Endpoint</label>
+          </div>
+          <div class="input-field">
+            <input id="username" type="text" class="validate" placeholder="e.g., admin">
+            <label for="username">Username</label>
+          </div>
+          <div class="input-field">
+            <input id="password" type="password" class="validate" placeholder="e.g., ********">
+            <label for="password">Password</label>
+          </div>
+          <div class="input-field">
+            <input id="remote-brok-ip" type="text" class="validate" placeholder="e.g., 192.168.1.1, https://example.com/">
+            <label for="remote-brok-ip">Remote Broker IP</label>
+          </div>
+          <div class="input-field">
+            <input id="remote-port" type="number" class="validate" placeholder="e.g., 8080">
+            <label for="remote-port">Port</label>
+          </div>
+        </div></div>
+        <div class="nav-btns">
+          <button class="prev-btn" onclick="prevScreen()">
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 4.5L3 12m0 0l7.5 7.5M3 12h18" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+            <span>Previous</span>
+          </button>
+          <button class="next-btn" id="generate-config" onclick="submitForm()">
+            <span>Generate My Config!</span>
+            <svg width="15" height="15" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 10: Simulation Loader -->
+  <div id="section-10" class="screen">
+    <div class="simulation-container">
+      <h2 id="simulation-title">Running Simulation</h2>
+      <div class="loader">
+        <div class="tree-container">
+          <div class="tree">
+            <div class="branch" style="--x:0">
+              <span style="--i:0;"></span>
+              <span style="--i:1;"></span>
+              <span style="--i:2;"></span>
+              <span style="--i:3;"></span>
+            </div>
+            <div class="branch" style="--x:1">
+              <span style="--i:0;"></span>
+              <span style="--i:1;"></span>
+              <span style="--i:2;"></span>
+              <span style="--i:3;"></span>
+            </div>
+            <div class="branch" style="--x:2">
+              <span style="--i:0;"></span>
+              <span style="--i:1;"></span>
+              <span style="--i:2;"></span>
+              <span style="--i:3;"></span>
+            </div>
+            <div class="branch" style="--x:3">
+              <span style="--i:0;"></span>
+              <span style="--i:1;"></span>
+              <span style="--i:2;"></span>
+              <span style="--i:3;"></span>
+            </div>
+            <div class="stem">
+              <span style="--i:0;"></span>
+              <span style="--i:1;"></span>
+              <span style="--i:2;"></span>
+              <span style="--i:3;"></span>
+            </div>
+            <span class="shadow"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+  <script src="gather.js"></script>
+</body>
+
+</html>

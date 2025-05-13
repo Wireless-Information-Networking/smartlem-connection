@@ -1,0 +1,3899 @@
+{
+    "house_name": "John Doe's Smart House",
+    "total_energy_used": 42.810000000000024,
+    "total_water_used": 1341.0,
+    "total_time": 131460,
+    "type_of_simulation": "realtime",
+    "start_date": null,
+    "end_date": null,
+    "actions": [
+        {
+            "timestamp": "2025-04-10T10:46:51.274834+00:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2025-04-10T10:46:51.275179+00:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2025-04-10T10:46:51.277077+00:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2025-04-10T10:57:36.855854+00:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2025-04-10T10:57:36.856248+00:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2025-04-10T10:57:36.866027+00:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T00:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "shower",
+            "device_used": "shower",
+            "energy_used": 3.325,
+            "water_used": 95.0,
+            "duration": 600
+        },
+        {
+            "timestamp": "2021-01-01T00:30:00+01:00",
+            "npc": "John Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T00:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "study",
+            "device_used": "computer",
+            "energy_used": 0.0625,
+            "water_used": 0,
+            "duration": 1500
+        },
+        {
+            "timestamp": "2021-01-01T00:40:00+01:00",
+            "npc": "John Doe",
+            "action": "shower",
+            "device_used": "shower",
+            "energy_used": 3.325,
+            "water_used": 95.0,
+            "duration": 600
+        },
+        {
+            "timestamp": "2021-01-01T01:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T01:10:00+01:00",
+            "npc": "John Doe",
+            "action": "go_to_gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T01:30:00+01:00",
+            "npc": "Kid Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T01:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "go_to_gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T01:40:00+01:00",
+            "npc": "John Doe",
+            "action": "clean_house",
+            "device_used": "vacuum_cleaner",
+            "energy_used": 0.4,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T02:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "cook",
+            "device_used": "stove",
+            "energy_used": 1.0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T02:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T02:10:00+01:00",
+            "npc": "John Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T02:15:00+01:00",
+            "npc": "John Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T02:20:00+01:00",
+            "npc": "Kid Doe",
+            "action": "read_book",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 900
+        },
+        {
+            "timestamp": "2021-01-01T02:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T02:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_dishwasher",
+            "device_used": "dishwasher",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T02:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T02:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T02:45:00+01:00",
+            "npc": "John Doe",
+            "action": "cook",
+            "device_used": "stove",
+            "energy_used": 1.0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T02:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T03:05:00+01:00",
+            "npc": "John Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T03:10:00+01:00",
+            "npc": "John Doe",
+            "action": "use_dishwasher",
+            "device_used": "dishwasher",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T03:10:00+01:00",
+            "npc": "Kid Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T03:15:00+01:00",
+            "npc": "John Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T03:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T03:20:00+01:00",
+            "npc": "John Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T03:25:00+01:00",
+            "npc": "John Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T03:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "go_for_jog",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T03:35:00+01:00",
+            "npc": "Kid Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T03:45:00+01:00",
+            "npc": "Kid Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T03:50:00+01:00",
+            "npc": "John Doe",
+            "action": "study",
+            "device_used": "computer",
+            "energy_used": 0.0625,
+            "water_used": 0,
+            "duration": 1500
+        },
+        {
+            "timestamp": "2021-01-01T03:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "overthink",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 600
+        },
+        {
+            "timestamp": "2021-01-01T03:50:00+01:00",
+            "npc": "Kid Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T04:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T04:20:00+01:00",
+            "npc": "John Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T04:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "cook",
+            "device_used": "stove",
+            "energy_used": 1.0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T04:25:00+01:00",
+            "npc": "John Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T04:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T04:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_dishwasher",
+            "device_used": "dishwasher",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T04:45:00+01:00",
+            "npc": "Kid Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T04:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T04:55:00+01:00",
+            "npc": "John Doe",
+            "action": "go_to_gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T04:55:00+01:00",
+            "npc": "Jane Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T05:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T05:20:00+01:00",
+            "npc": "Kid Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T05:25:00+01:00",
+            "npc": "John Doe",
+            "action": "cook",
+            "device_used": "stove",
+            "energy_used": 1.0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T05:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T05:45:00+01:00",
+            "npc": "John Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T05:50:00+01:00",
+            "npc": "John Doe",
+            "action": "use_dishwasher",
+            "device_used": "dishwasher",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T05:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "go_for_jog",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T05:55:00+01:00",
+            "npc": "John Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T05:55:00+01:00",
+            "npc": "Kid Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T06:00:00+01:00",
+            "npc": "John Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T06:05:00+01:00",
+            "npc": "John Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T06:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "clean_house",
+            "device_used": "vacuum_cleaner",
+            "energy_used": 0.4,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T06:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T06:35:00+01:00",
+            "npc": "John Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T06:40:00+01:00",
+            "npc": "Kid Doe",
+            "action": "read_book",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 900
+        },
+        {
+            "timestamp": "2021-01-01T06:55:00+01:00",
+            "npc": "Jane Doe",
+            "action": "cook",
+            "device_used": "stove",
+            "energy_used": 1.0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T07:05:00+01:00",
+            "npc": "John Doe",
+            "action": "go_to_gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T07:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T07:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_dishwasher",
+            "device_used": "dishwasher",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T07:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T07:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T07:30:00+01:00",
+            "npc": "Kid Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T07:35:00+01:00",
+            "npc": "John Doe",
+            "action": "cook",
+            "device_used": "stove",
+            "energy_used": 1.0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T07:55:00+01:00",
+            "npc": "John Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T07:55:00+01:00",
+            "npc": "Kid Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T08:00:00+01:00",
+            "npc": "John Doe",
+            "action": "use_dishwasher",
+            "device_used": "dishwasher",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T08:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T08:00:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:05:00+01:00",
+            "npc": "John Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T08:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T08:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:10:00+01:00",
+            "npc": "John Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T08:10:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:15:00+01:00",
+            "npc": "John Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T08:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "overthink",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 600
+        },
+        {
+            "timestamp": "2021-01-01T08:15:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T08:20:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:25:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:30:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:35:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:40:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:45:00+01:00",
+            "npc": "John Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T08:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "go_shopping",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1500
+        },
+        {
+            "timestamp": "2021-01-01T08:45:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:50:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:55:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T08:55:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:00:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:05:00+01:00",
+            "npc": "John Doe",
+            "action": "go_for_jog",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T09:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:10:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:10:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:15:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:15:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:20:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:20:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:25:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:25:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:30:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:30:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:35:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:35:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:40:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:40:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:45:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:45:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:50:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:50:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:55:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:55:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T09:55:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:00:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:00:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:05:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:10:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:10:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:15:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:15:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:20:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:20:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:25:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:25:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:30:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:30:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:35:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:35:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:40:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:40:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:45:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:45:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:50:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:50:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:55:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:55:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T10:55:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:00:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:00:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:05:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:10:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:10:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:15:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:15:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:20:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:20:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:25:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:25:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:30:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:30:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:35:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:35:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:40:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:40:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:45:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:45:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:50:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:50:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:55:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:55:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T11:55:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:00:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:00:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:05:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:10:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:10:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:15:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:15:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:20:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:20:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:25:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:25:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:30:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:30:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:35:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:35:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:40:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:40:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:45:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:45:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:50:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:50:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:55:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:55:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T12:55:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:00:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:00:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:05:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:10:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:10:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:15:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:15:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:20:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:20:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:25:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:25:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:30:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:30:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:35:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:35:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:40:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:40:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:45:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:45:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:50:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:50:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:55:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:55:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T13:55:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:00:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:00:00+01:00",
+            "npc": "Kid Doe",
+            "action": "School",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:05:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:10:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:10:00+01:00",
+            "npc": "Kid Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T14:15:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:15:00+01:00",
+            "npc": "Kid Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T14:20:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:20:00+01:00",
+            "npc": "Kid Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T14:25:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:25:00+01:00",
+            "npc": "Kid Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T14:30:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:35:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:40:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:45:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:50:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:55:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:55:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T14:55:00+01:00",
+            "npc": "Kid Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T15:00:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:05:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:10:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:15:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:20:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:20:00+01:00",
+            "npc": "Kid Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T15:25:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:30:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:30:00+01:00",
+            "npc": "Kid Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T15:35:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:35:00+01:00",
+            "npc": "Kid Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T15:40:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:45:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:50:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:50:00+01:00",
+            "npc": "Kid Doe",
+            "action": "play_games",
+            "device_used": "gaming_console",
+            "energy_used": 0.0375,
+            "water_used": 0,
+            "duration": 900
+        },
+        {
+            "timestamp": "2021-01-01T15:55:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:55:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T15:55:00+01:00",
+            "npc": "Kid Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T16:00:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:05:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:10:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:10:00+01:00",
+            "npc": "Kid Doe",
+            "action": "read_book",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 900
+        },
+        {
+            "timestamp": "2021-01-01T16:15:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:20:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:20:00+01:00",
+            "npc": "Kid Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T16:25:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:25:00+01:00",
+            "npc": "Kid Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T16:30:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:35:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:40:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T16:45:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T16:45:00+01:00",
+            "npc": "Kid Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T16:50:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T16:55:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T17:00:00+01:00",
+            "npc": "John Doe",
+            "action": "Work",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T17:10:00+01:00",
+            "npc": "John Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T17:15:00+01:00",
+            "npc": "John Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T17:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T17:30:00+01:00",
+            "npc": "Kid Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T17:45:00+01:00",
+            "npc": "John Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T17:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "cook",
+            "device_used": "stove",
+            "energy_used": 1.0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T17:55:00+01:00",
+            "npc": "Kid Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T18:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T18:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T18:10:00+01:00",
+            "npc": "John Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T18:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_dishwasher",
+            "device_used": "dishwasher",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T18:10:00+01:00",
+            "npc": "Kid Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T18:15:00+01:00",
+            "npc": "John Doe",
+            "action": "Gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T18:20:00+01:00",
+            "npc": "John Doe",
+            "action": "Gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T18:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T18:25:00+01:00",
+            "npc": "John Doe",
+            "action": "Gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T18:25:00+01:00",
+            "npc": "Kid Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T18:30:00+01:00",
+            "npc": "John Doe",
+            "action": "Gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T18:35:00+01:00",
+            "npc": "John Doe",
+            "action": "Gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T18:40:00+01:00",
+            "npc": "John Doe",
+            "action": "Gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T18:45:00+01:00",
+            "npc": "John Doe",
+            "action": "Gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T18:50:00+01:00",
+            "npc": "John Doe",
+            "action": "Gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T18:55:00+01:00",
+            "npc": "John Doe",
+            "action": "Gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T19:00:00+01:00",
+            "npc": "John Doe",
+            "action": "Gym",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 0
+        },
+        {
+            "timestamp": "2021-01-01T19:00:00+01:00",
+            "npc": "Kid Doe",
+            "action": "read_book",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 900
+        },
+        {
+            "timestamp": "2021-01-01T19:10:00+01:00",
+            "npc": "John Doe",
+            "action": "use_dishwasher",
+            "device_used": "dishwasher",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T19:15:00+01:00",
+            "npc": "John Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T19:20:00+01:00",
+            "npc": "John Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T19:20:00+01:00",
+            "npc": "Jane Doe",
+            "action": "watch_tv",
+            "device_used": "tv",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 3600
+        },
+        {
+            "timestamp": "2021-01-01T19:25:00+01:00",
+            "npc": "John Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T19:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "shower",
+            "device_used": "shower",
+            "energy_used": 3.325,
+            "water_used": 95.0,
+            "duration": 600
+        },
+        {
+            "timestamp": "2021-01-01T19:50:00+01:00",
+            "npc": "Jane Doe",
+            "action": "read_book",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 900
+        },
+        {
+            "timestamp": "2021-01-01T20:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "read_book",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 900
+        },
+        {
+            "timestamp": "2021-01-01T20:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "read_book",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 900
+        },
+        {
+            "timestamp": "2021-01-01T20:25:00+01:00",
+            "npc": "John Doe",
+            "action": "watch_tv",
+            "device_used": "tv",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 3600
+        },
+        {
+            "timestamp": "2021-01-01T20:25:00+01:00",
+            "npc": "Kid Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T20:30:00+01:00",
+            "npc": "John Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T20:30:00+01:00",
+            "npc": "Jane Doe",
+            "action": "go_shopping",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1500
+        },
+        {
+            "timestamp": "2021-01-01T20:55:00+01:00",
+            "npc": "John Doe",
+            "action": "go_shopping",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1500
+        },
+        {
+            "timestamp": "2021-01-01T21:00:00+01:00",
+            "npc": "John Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T21:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T21:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T21:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T21:15:00+01:00",
+            "npc": "John Doe",
+            "action": "read_book",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 900
+        },
+        {
+            "timestamp": "2021-01-01T21:20:00+01:00",
+            "npc": "John Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T21:35:00+01:00",
+            "npc": "Jane Doe",
+            "action": "cook",
+            "device_used": "stove",
+            "energy_used": 1.0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T21:50:00+01:00",
+            "npc": "John Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T21:55:00+01:00",
+            "npc": "Jane Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T22:00:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_dishwasher",
+            "device_used": "dishwasher",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T22:05:00+01:00",
+            "npc": "Jane Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T22:05:00+01:00",
+            "npc": "Kid Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T22:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T22:15:00+01:00",
+            "npc": "Jane Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T22:20:00+01:00",
+            "npc": "John Doe",
+            "action": "cook",
+            "device_used": "stove",
+            "energy_used": 1.0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T22:25:00+01:00",
+            "npc": "Jane Doe",
+            "action": "overthink",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 600
+        },
+        {
+            "timestamp": "2021-01-01T22:30:00+01:00",
+            "npc": "Kid Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T22:40:00+01:00",
+            "npc": "John Doe",
+            "action": "eat",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1200
+        },
+        {
+            "timestamp": "2021-01-01T22:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "read_book",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 900
+        },
+        {
+            "timestamp": "2021-01-01T22:40:00+01:00",
+            "npc": "Kid Doe",
+            "action": "wash_hands",
+            "device_used": "sink",
+            "energy_used": 0.42000000000000004,
+            "water_used": 12.0,
+            "duration": 120
+        },
+        {
+            "timestamp": "2021-01-01T22:45:00+01:00",
+            "npc": "John Doe",
+            "action": "use_dishwasher",
+            "device_used": "dishwasher",
+            "energy_used": 0.1,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T22:45:00+01:00",
+            "npc": "Jane Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T22:45:00+01:00",
+            "npc": "Kid Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T22:50:00+01:00",
+            "npc": "Kid Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T22:55:00+01:00",
+            "npc": "John Doe",
+            "action": "brush_teeth",
+            "device_used": "sink",
+            "energy_used": 1.05,
+            "water_used": 30.0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T23:10:00+01:00",
+            "npc": "Jane Doe",
+            "action": "study",
+            "device_used": "computer",
+            "energy_used": 0.0625,
+            "water_used": 0,
+            "duration": 1500
+        },
+        {
+            "timestamp": "2021-01-01T23:25:00+01:00",
+            "npc": "Kid Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        },
+        {
+            "timestamp": "2021-01-01T23:30:00+01:00",
+            "npc": "John Doe",
+            "action": "clean_house",
+            "device_used": "vacuum_cleaner",
+            "energy_used": 0.4,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T23:35:00+01:00",
+            "npc": "John Doe",
+            "action": "use_toilet",
+            "device_used": "toilet",
+            "energy_used": 0,
+            "water_used": 18.0,
+            "duration": 180
+        },
+        {
+            "timestamp": "2021-01-01T23:40:00+01:00",
+            "npc": "Jane Doe",
+            "action": "nap_sleep",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 1800
+        },
+        {
+            "timestamp": "2021-01-01T23:45:00+01:00",
+            "npc": "Kid Doe",
+            "action": "call_friend",
+            "device_used": "NAN",
+            "energy_used": 0,
+            "water_used": 0,
+            "duration": 300
+        }
+    ]
+}

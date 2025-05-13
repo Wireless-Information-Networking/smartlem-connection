@@ -1,0 +1,25 @@
+{
+  "name": "mqtt-admin-pannel",
+  "version": "1.0.0",
+  "main": "eleconfig.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron . --no-sandbox"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^32.1.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "electron-store": "^10.0.0",
+    "express": "^4.21.1",
+    "jquery": "^3.7.1",
+    "mqtt": "^5.10.1",
+    "pidusage": "^3.0.2",
+    "util": "^0.12.5"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "yar",
+  "version": "1.0.0",
+  "description": "intelligent and autonomous system designed to optimize energy consumption and production within a self-sustainable smart home.",
+  "main": "electronmain.js",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RamonG",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^35.1.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.8",
+    "chokidar": "^4.0.3",
+    "mqtt": "^5.10.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

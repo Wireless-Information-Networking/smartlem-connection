@@ -1,0 +1,80 @@
+[
+    {
+        "device": "Kitchen Sink",
+        "flow_rate": [2, 10],
+        "typical_duration": [1, 10],
+        "max_uses_per_day": 10,
+        "usage_patterns": {
+            "morning": 0.6,
+            "midday": 0.8,
+            "dinner": 0.9,
+            "evening": 0.5,
+            "other": 0.2
+        }
+    },
+    {
+        "device": "Dishwasher",
+        "flow_rate": [8, 15],
+        "typical_duration": [30, 90],
+        "max_uses_per_day": 2,
+        "usage_patterns": {
+            "morning": 0.1,
+            "midday": 0.0,
+            "dinner": 0.9,
+            "evening": 0.0,
+            "other": 0.0
+        }
+    },
+    {
+        "device": "Bathroom Sink",
+        "flow_rate": [1, 6],
+        "typical_duration": [1, 5],
+        "max_uses_per_day": 7,
+        "usage_patterns": {
+            "morning": 0.9,
+            "midday": 0.5,
+            "dinner": 0.6,
+            "evening": 0.8,
+            "other": 0.2
+        }
+    },
+    {
+        "device": "Shower",
+        "flow_rate": [6, 15],
+        "typical_duration": [5, 20],
+        "max_uses_per_day": 2,
+        "usage_patterns": {
+            "morning": 0.7,
+            "midday": 0.0,
+            "dinner": 0.1,
+            "evening": 0.9,
+            "other": 0.0
+        }
+    },
+    {
+        "device": "Toilet",
+        "flow_rate": [2, 5],
+        "typical_duration": [0.5, 1.5],
+        "max_uses_per_day": 15,
+        "usage_patterns": {
+            "morning": 0.7,
+            "midday": 0.6,
+            "dinner": 0.8,
+            "evening": 0.6,
+            "other": 0.3
+        }
+    },
+    {
+        "device": "Washing Machine",
+        "flow_rate": [10, 20],
+        "typical_duration": [30, 60],
+        "max_uses_per_day": 1,
+        "usage_patterns": {
+            "morning": 0.0,
+            "midday": 0.1,
+            "dinner": 0.9,
+            "evening": 0.0,
+            "other": 0.0
+        }
+    }
+]
